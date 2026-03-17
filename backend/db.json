@@ -11,9 +11,9 @@
       "quote": "Life is like riding a bicycle. To keep your balance you must keep moving."
     },
     {
-      "id": "3",
-      "author": "Sih",
-      "quote": "Saluta"
+      "id": "4",
+      "author": "Mihai Eminescu",
+      "quote": "Ce te legeni codrule"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
