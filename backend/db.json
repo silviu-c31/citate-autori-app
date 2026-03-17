@@ -14,6 +14,51 @@
       "id": "4",
       "author": "Mihai Eminescu",
       "quote": "Ce te legeni codrule"
+    },
+    {
+      "id": "5",
+      "author": "Osho",
+      "quote": "Viata incepe acolo un frica se termina"
+    },
+    {
+      "id": "6",
+      "author": "Abraham Lincoln",
+      "quote": "In definitiv, nu anii din viata sunt cei care conteaza, ci viata din anii tai.\n"
+    },
+    {
+      "id": "7",
+      "author": "Les Brown",
+      "quote": "Viata nu are limite, cu exceptia celor pe care le faci tu."
+    },
+    {
+      "id": "8",
+      "author": "Marie Curie",
+      "quote": "Primul principiu în viață: să nu te dai bătut în fața oamenilor și a întâmplărilor."
+    },
+    {
+      "id": "9",
+      "author": "Victor Hugo",
+      "quote": "Viața este o glumă foarte serioasă."
+    },
+    {
+      "id": "10",
+      "author": "Albert Einstein",
+      "quote": "Sunt doua feluri de a-ti trai viata… Unul – de a crede ca nu exista miracole. Altul – de a crede ca totul este un miracol."
+    },
+    {
+      "id": "11",
+      "author": "Mhatma Gandhi",
+      "quote": "Traieste ca si cum ai muri maine. Invata ca si cum ai trai vesnic."
+    },
+    {
+      "id": "12",
+      "author": "Brian Tracy",
+      "quote": "Norocul e destul de predictibil. Dacă vrei să fii mai norocos, asumă-ți mai multe riscuri, fii mai activ, fii prezent mai des."
+    },
+    {
+      "id": "13",
+      "author": "Annie Dillard",
+      "quote": "Cum ne petrecem zilele e, de fapt, cum ne trăim viața.\n"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
