@@ -27,15 +27,36 @@ app.get("/", (req, res) => {
   res.send("Printing Quotes API is running...");
 });
 
-// Extragem citatele
+// =========================================================================
+// RUTA ACTUALIZATĂ: GET /api/quotes?search=termen
+// Extragem citatele și le filtrăm dacă există un termen de căutare
+// =========================================================================
 app.get("/api/quotes", async (req, res) => {
   try {
     const response = await fetch(JSON_SERVER_URL);
     const data = await response.json();
-    res.json(data);
+
+    const { search } = req.query; // req.query conține parametrii din URL (?search=...)
+
+    if (search && search.trim()) {
+      const term = search.trim().toLowerCase();
+
+      // Filtrăm array-ul - includem citatul dacă termenul apare
+      // în numele autorului SAU în textul citatului
+      const filtered = data.filter(
+        (q) =>
+          q.author.toLowerCase().includes(term) ||
+          q.quote.toLowerCase().includes(term),
+      );
+
+      return res.status(200).json(filtered);
+    }
+
+    // Fără parametru search -> returnăm toate citatele
+    res.status(200).json(data);
   } catch (error) {
-    console.error("Error fetching quotes:", error);
-    res.status(500).json({ error: "Failed to fetch quotes" });
+    console.error("Eroare la preluarea citatelor:", error.message);
+    res.status(500).json({ error: "Nu s-au putut prelua citatele." });
   }
 });
 
@@ -133,7 +154,6 @@ app.listen(port, () =>
 
 // Verificam repornirea automata a serverului
 console.log("Server restarted!");
-
 // app.get("/", (req, res) => {
 //   res.json({
 //     message: "Printing Quotes API is running...",

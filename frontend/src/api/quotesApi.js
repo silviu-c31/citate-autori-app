@@ -7,8 +7,15 @@ const BASE_URL = "/api/quotes";
 // GET /api/quotes - preia toate citatele
 // Folosit în QuotesPage și ManagePage la montarea componentei.
 // -------------------------------------------------------------------------
-export async function getAllQuotes() {
-  const response = await fetch(BASE_URL);
+// GET /api/quotes?search=termen
+// Dacă `search` este gol sau lipsă, se returnează toate citatele.
+export async function getAllQuotes(search = "") {
+  // Construim URL-ul dinamic: cu sau fără query string
+  const url = search.trim()
+    ? `${BASE_URL}?search=${encodeURIComponent(search.trim())}`
+    : BASE_URL;
+
+  const response = await fetch(url);
   if (!response.ok) throw new Error("Nu s-au putut prelua citatele.");
   return response.json();
 }

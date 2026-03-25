@@ -59,6 +59,11 @@
       "id": "13",
       "author": "Annie Dillard",
       "quote": "Cum ne petrecem zilele e, de fapt, cum ne trăim viața.\n"
+    },
+    {
+      "id": "14",
+      "author": "Marcus Aurelius",
+      "quote": "Pacea e mai buna decat razboiul"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
